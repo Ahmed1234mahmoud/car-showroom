@@ -1,0 +1,329 @@
+body{
+    font-family: 'Cairo',sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+}
+/****************************/
+
+div.logo{
+  background: white;
+  color: #aaa;
+  height: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
+/***************************/
+header{
+    background: #888;
+    color: #333;
+    padding: 15px 0;
+    text-align: center;
+}
+/****************************/
+
+ /***************************/
+
+nav ul{
+   list-style: none;
+   padding: 20px;
+   margin: 13% 0 0;
+   display: flex;
+   justify-content: center;
+   gap: 50px;
+   font-size: 30px;
+   cursor: pointer;
+   transition: 0.9s;
+}
+/*******************************/
+nav a{
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+/******************************/
+nav a:hover{
+    color: #ffcc00;
+}
+
+/*****************************/
+ .hero{
+    text-align: center;
+    background: #ddd;
+    color:brown ;
+    padding: 80px 20px;
+ }
+
+/****************************/
+
+ .hero img{
+   width: 30%;
+ }
+
+ /***************************/
+
+ .hero h2{
+    font-size: 40px;
+    cursor: pointer;
+ }
+
+
+ /**************************/
+ .hero p{
+  font-size: 25px;
+  cursor: pointer;
+ }
+
+ .hero p:hover{
+  color: darkslategrey;
+ }
+
+
+.hero h2:hover{
+  color: darkslategrey;
+}
+/**************************/
+
+ .hero button{
+  background:#ccc;
+  color: darkred;
+    border: none;
+    padding: 10px 20px;
+    font-size: 25px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+ }
+
+ /************************/
+ 
+ .hero button:hover{
+    color: darkslategrey;
+ }
+
+
+/************************/
+
+ .cars{
+   display:flex;
+    padding:  40px 20px;
+    text-align: center;
+    background: #888;
+ }
+
+/**************************/
+
+.cars img{
+   width: 100%;
+   border-radius: 10px;
+   display: block;
+   list-style: none;
+   
+}
+
+ .cars h2{
+    font-size: 40px;
+    text-align: center;
+    /*background: cornflowerblue;*/
+    color: slategray;
+    cursor: pointer;
+    transition: 0.3s;
+ }
+
+ .cars h2:hover{
+   color: antiquewhite;
+ }
+  
+ /**************************/
+
+ .cars p:hover{
+   color: blanchedalmond;
+ }
+
+ .cars-list{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+    
+ }
+  
+ .Car-list img{
+   width: 259px;
+   height: 194px;
+   margin: 0 30px;
+   cursor: pointer;
+   transition: 0.7s;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+
+ }
+
+ /****************************/
+
+ .car-card{
+    background: #fff;
+    border: 1px solid#ddd;
+    border-radius: 10px;
+    text-align: right;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+
+ .Car-card img{
+   width: 259px;
+   height: 194px;
+   margin: 0 10px;
+   cursor: pointer;
+   transition: 0.5s;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+ }
+
+ /**********************/
+
+
+.cars h3:hover{
+   color: #ffcc00;
+}
+/***************************/
+
+ .Cars-card h3{
+   font-size: 35px;
+   /*background-color: #ffcc00;*/
+   margin: 10px 5px;
+   color: #000;
+   cursor: pointer;
+   transition: 0.8s;
+   
+ }
+ .Cars-card img{
+   width: 259px;
+   height: 194px;
+   margin: 0 300px;
+   cursor: pointer;
+   transition: 0.8s;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+ }
+
+
+ /****************************/
+
+ .Cars-card p{
+   font-size: 20px;
+  /* background-color: aqua;*/
+   color: #333;
+   cursor: pointer;
+   transition: 0.3s;
+ }
+
+
+ /*****************************/
+
+ .car-card:hover{
+    transform: translateY(-5px);
+ }
+
+ /*****************************/
+ 
+ .Car-list h3{
+    font-size: 35px;
+   /* background-color: aqua;*/
+    margin: 10px 5px;
+    color: #000;
+    cursor: pointer;
+    transition: 0.5s;
+ }
+
+
+ /******************************/
+
+ .Car-list p{
+    font-size:20px;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+ }
+
+ /*****************************/
+
+ .Car-card h3{
+   font-size: 35px;
+   /*background-color: #ffcc00;*/
+   margin: 10px 5px;
+   color:#000;
+   cursor: pointer;
+   transition: 0.5s;
+ }
+
+
+ /*****************************/
+ 
+ .Car-card p{
+   font-size: 20px;
+   color:#333;
+   cursor: pointer;
+   transition: 0.3s;
+ }
+ /******************************/
+
+ footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+ }
+
+ /********************************/
+
+ footer ul{
+   list-style: none;
+   padding: 0;
+   margin: 0;
+ /*  width: 10px;*/
+
+ }
+
+ /******************************/
+
+ footer ul li{
+   display:inline-block;
+   margin: 0 15px; 
+
+ }
+
+/*******************************/
+
+ footer ul li a{
+   color: #fff;
+   font-size: 28px;
+   transition: color 0.3s ease;
+ }
+
+
+ /******************************/
+
+ footer ul li a:hover .icon-facebook{
+   color: #1877f2;
+ }
+
+ /******************************/
+
+ footer ul li a:hover .icon-twitter{
+   color: aqua;
+ }
+
+ /*******************************/
+
+ footer ul li a:hover .icon-googlepluse{
+   color: #999;
+ }
+
+ 
