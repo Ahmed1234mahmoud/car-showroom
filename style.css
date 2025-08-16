@@ -1,329 +1,376 @@
 body{
-    font-family: 'Cairo',sans-serif;
+    font-family: 'cairo',sans-serif;
     margin: 0;
     padding: 0;
-    background: #f5f5f5;
+    direction: rtl;
+    background-color: #f9f9f9;
+}
+
+h1, h2 , h3 {
+   color: #0a3db2;
+}
+
+p, li , label{
     color: #333;
 }
-/****************************/
-
-div.logo{
-  background: white;
-  color: #aaa;
-  height: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-
-}
-
-/***************************/
+/******************/
 header{
-    background: #888;
-    color: #333;
-    padding: 15px 0;
     text-align: center;
+    font-size: 25px;
+    padding: 25px 0;
+    background-color: aliceblue;
+    color: #777;
+    
 }
-/****************************/
 
- /***************************/
+/**********************/
+
+h2 .logo{
+    margin-bottom: 10px ;
+    
+}
+
+/**********************/
+nav div.img{
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    padding: 0 90px;
+    margin: 0 100px;
+    cursor: pointer;
+   
+    
+}
+
+/*********************/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+
+/***********************/
 
 nav ul{
-   list-style: none;
-   padding: 20px;
-   margin: 13% 0 0;
-   display: flex;
-   justify-content: center;
-   gap: 50px;
-   font-size: 30px;
-   cursor: pointer;
-   transition: 0.9s;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
-/*******************************/
-nav a{
-    color: #000;
+
+nav ul li a{
+    color: #333;
+    font-size: 18px;
     text-decoration: none;
     font-weight: bold;
 }
-/******************************/
-nav a:hover{
-    color: #ffcc00;
+
+nav ul li a:hover{
+    color: brown;
 }
 
-/*****************************/
- .hero{
+/***********************/
+.welcom{
+    background-color: #dff9fb;
+    padding: 40px 20px;
     text-align: center;
-    background: #ddd;
-    color:brown ;
-    padding: 80px 20px;
- }
-
-/****************************/
-
- .hero img{
-   width: 30%;
- }
-
- /***************************/
-
- .hero h2{
-    font-size: 40px;
-    cursor: pointer;
- }
-
-
- /**************************/
- .hero p{
-  font-size: 25px;
-  cursor: pointer;
- }
-
- .hero p:hover{
-  color: darkslategrey;
- }
-
-
-.hero h2:hover{
-  color: darkslategrey;
 }
-/**************************/
 
- .hero button{
-  background:#ccc;
-  color: darkred;
-    border: none;
-    padding: 10px 20px;
-    font-size: 25px;
-    margin-top: 15px;
+.welcom h1{
+    font-size: 30px;
+    color: #333;
     cursor: pointer;
-    transition: 0.5s;
- }
+    transition: 0.4s;
+}
+/**********************/
 
- /************************/
- 
- .hero button:hover{
-    color: darkslategrey;
- }
+.welcom img{
 
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2); 
+    padding: 0 50px;
+    width:  55%;
+
+}
+/**********************/
+
+.img.img{
+    padding: 25px;
+    margin: 100px;
+    width: 25%;
+    display:flex;
+    border-radius: 30px;
+    /*justify-content: center;*/
+    gap: 170px;
+    list-style: none;
+    cursor: pointer;
+    
+}
+
+.img.img:hover{
+    transform: scale(1.05);
+  /*  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
+    border-color: #2196f3;
+}
+
+/*********************/
+
+.welcom h1:hover{
+    color: goldenrod;
+}
+
+/***********************/
+.welcom p{
+    font-size: 20px;
+    color: #222;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.welcom p:hover{
+    color: goldenrod;
+}
+
+/***********************/
+.welcom .btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0a3d62;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.welcom .btn:hover{
+    color: brown;
+}
+
+/************************/
+.offers {
+    text-align: center;
+    padding: 20px 20px;
+    background-color:#dff9fb ;
+    
+
+}
+
+.offers h2{
+    font-size: 30px;
+    color: #222;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.offers h2:hover{
+    color: goldenrod;
+}
+
+/************************/
+.offers-card h3{
+    font-size: 20px;
+    color: #222;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.offers-card h3:hover{
+    color: goldenrod;
+}
 
 /************************/
 
- .cars{
-   display:flex;
-    padding:  40px 20px;
+.offers-card p{
+   font-size: 18px;
+   color: #222;
+   cursor: pointer;
+   transition: 0.4s;
+}
+
+.offers-card p:hover{
+    color: goldenrod;
+}
+
+/************************/
+
+.testimonials{
     text-align: center;
-    background: #888;
- }
+    background-color: silver;
+    padding: 10px 20px;
+}
+
+.testimonials h2{
+    font-size: 30px;
+    color: #222;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.testimonials h2:hover{
+    color: goldenrod;
+}
+/*************************/
+.testimonials img{
+    padding:  20px;
+    width:  85%;
+    height: 250px;
+    border-radius: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+/**************************/
+.testimonials img:hover{
+    transform: scale(1.09);
+    border-color: #2196f3;
+}
+
+/*************************/
+.testimonials blockquote p{
+    font-size: 20px;
+    color: #222;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.testimonials blockquote p:hover{
+    color: goldenrod;
+}
+
+/***********************/
+.testimonials blockquote cite{
+    font-size: 20px;
+    color: #222;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.testimonials blockquote cite:hover{
+    color: goldenrod;
+}
+
+/***********************/
+.purchases{
+    text-align: center;
+    background: slategray;
+    padding: 10px 20px;
+}
+
+.purchases h3{
+    font-size: 30px;
+    color: #222;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.purchases h3:hover{
+    color: goldenrod;
+}
+
+/************************/
+.purchases ul{
+    font-size: 25px;
+    color: #222;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.purchases ul:hover{
+    color: goldenrod;
+}
+
+/**********************/
+
+.purchases a{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0a3d62;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.purchases a:hover{
+    color: brown;
+}
+
+/**********************/
+.purchases img{
+   padding: 90px;
+   margin-bottom: 100px;
+   border-radius: 20px;
+   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+   cursor: pointer;
+
+    
+}
+
+.purchases img:hover{
+    transform: scale(1.04);
+}
+
+/*********************/
+
+.order-form{
+    background-color: #0a3d62;
+    padding: 30px 20px;
+    max-width: 500px;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+/**********************/
+.order-form .form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-form .input,
+.order-form textarea{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/**********************/
+
+.order-form button{
+    background-color: #0a3d62;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+/***********************/
+
+footer{
+    background-color: #222;
+    padding: 10px 15px;
+    text-align: center;
+    
+}
+
+footer p{
+    font-size: 20px;
+    color: #f9f9f9;
+    padding: 10px 20px;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+}
 
 /**************************/
 
-.cars img{
-   width: 100%;
-   border-radius: 10px;
-   display: block;
-   list-style: none;
-   
+footer ul li{
+    display: inline-block;
+    margin: 0 15px;
 }
-
- .cars h2{
-    font-size: 40px;
-    text-align: center;
-    /*background: cornflowerblue;*/
-    color: slategray;
-    cursor: pointer;
-    transition: 0.3s;
- }
-
- .cars h2:hover{
-   color: antiquewhite;
- }
-  
- /**************************/
-
- .cars p:hover{
-   color: blanchedalmond;
- }
-
- .cars-list{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    
-    
- }
-  
- .Car-list img{
-   width: 259px;
-   height: 194px;
-   margin: 0 30px;
-   cursor: pointer;
-   transition: 0.7s;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-
-
- }
-
- /****************************/
-
- .car-card{
-    background: #fff;
-    border: 1px solid#ddd;
-    border-radius: 10px;
-    text-align: right;
-    padding: 15px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
- }
-
- .Car-card img{
-   width: 259px;
-   height: 194px;
-   margin: 0 10px;
-   cursor: pointer;
-   transition: 0.5s;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-
- }
-
- /**********************/
-
-
-.cars h3:hover{
-   color: #ffcc00;
-}
-/***************************/
-
- .Cars-card h3{
-   font-size: 35px;
-   /*background-color: #ffcc00;*/
-   margin: 10px 5px;
-   color: #000;
-   cursor: pointer;
-   transition: 0.8s;
-   
- }
- .Cars-card img{
-   width: 259px;
-   height: 194px;
-   margin: 0 300px;
-   cursor: pointer;
-   transition: 0.8s;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-
- }
-
-
- /****************************/
-
- .Cars-card p{
-   font-size: 20px;
-  /* background-color: aqua;*/
-   color: #333;
-   cursor: pointer;
-   transition: 0.3s;
- }
-
-
- /*****************************/
-
- .car-card:hover{
-    transform: translateY(-5px);
- }
-
- /*****************************/
- 
- .Car-list h3{
-    font-size: 35px;
-   /* background-color: aqua;*/
-    margin: 10px 5px;
-    color: #000;
-    cursor: pointer;
-    transition: 0.5s;
- }
-
-
- /******************************/
-
- .Car-list p{
-    font-size:20px;
-    color: #333;
-    cursor: pointer;
-    transition: 0.3s;
- }
-
- /*****************************/
-
- .Car-card h3{
-   font-size: 35px;
-   /*background-color: #ffcc00;*/
-   margin: 10px 5px;
-   color:#000;
-   cursor: pointer;
-   transition: 0.5s;
- }
-
-
- /*****************************/
- 
- .Car-card p{
-   font-size: 20px;
-   color:#333;
-   cursor: pointer;
-   transition: 0.3s;
- }
- /******************************/
-
- footer{
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
- }
-
- /********************************/
-
- footer ul{
-   list-style: none;
-   padding: 0;
-   margin: 0;
- /*  width: 10px;*/
-
- }
-
- /******************************/
-
- footer ul li{
-   display:inline-block;
-   margin: 0 15px; 
-
- }
-
-/*******************************/
-
- footer ul li a{
-   color: #fff;
-   font-size: 28px;
-   transition: color 0.3s ease;
- }
-
-
- /******************************/
-
- footer ul li a:hover .icon-facebook{
-   color: #1877f2;
- }
-
- /******************************/
-
- footer ul li a:hover .icon-twitter{
-   color: aqua;
- }
-
- /*******************************/
-
- footer ul li a:hover .icon-googlepluse{
-   color: #999;
- }
-
- 
