@@ -9,6 +9,18 @@ body{
 h1, h2 , h3 {
    color: #0a3db2;
 }
+/*************************/
+.logo{
+    margin-bottom: 30%;
+    cursor: pointer;
+    
+    
+}
+/**************************/
+.logo:hover{
+    color: brown;
+    transform: scale(1.05);
+}
 
 p, li , label{
     color: #333;
@@ -70,6 +82,7 @@ nav ul li a{
 
 nav ul li a:hover{
     color: brown;
+    transform: scale(1.07);
 }
 
 /***********************/
@@ -85,6 +98,12 @@ nav ul li a:hover{
     cursor: pointer;
     transition: 0.4s;
 }
+/***********************/
+.welcom h1:hover{
+    transform: scale(1.03);
+    color: goldenrod;
+}
+
 /**********************/
 
 .welcom img{
@@ -113,12 +132,6 @@ nav ul li a:hover{
     transform: scale(1.05);
   /*  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
     border-color: #2196f3;
-}
-
-/*********************/
-
-.welcom h1:hover{
-    color: goldenrod;
 }
 
 /***********************/
@@ -168,6 +181,7 @@ nav ul li a:hover{
 
 .offers h2:hover{
     color: goldenrod;
+    transform: scale(1.03);
 }
 
 /************************/
@@ -180,6 +194,7 @@ nav ul li a:hover{
 
 .offers-card h3:hover{
     color: goldenrod;
+    transform: scale(1.03);
 }
 
 /************************/
@@ -193,6 +208,7 @@ nav ul li a:hover{
 
 .offers-card p:hover{
     color: goldenrod;
+    transform: scale(1.03);
 }
 
 /************************/
@@ -212,6 +228,7 @@ nav ul li a:hover{
 
 .testimonials h2:hover{
     color: goldenrod;
+    transform: scale(1.03);
 }
 /*************************/
 .testimonials img{
@@ -238,6 +255,7 @@ nav ul li a:hover{
 
 .testimonials blockquote p:hover{
     color: goldenrod;
+    transform: scale(1.03);
 }
 
 /***********************/
@@ -250,6 +268,7 @@ nav ul li a:hover{
 
 .testimonials blockquote cite:hover{
     color: goldenrod;
+    transform: scale(1.03);
 }
 
 /***********************/
