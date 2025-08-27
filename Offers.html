@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initail-scale=1.0">
+    <title>kudu-عروض الاكلات</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.main.css">
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          direction: rtl;
+          background: #f8f8f8;
+          text-align: center;
+          margin: 0;
+          padding: 20px;
+        }
+        h1 {
+          color: #d32f2f;
+        }
+        button {
+          background: #d32f2f;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          font-size: 18px;
+          border-radius: 8px;
+          cursor: pointer;
+          margin: 5px;
+        }
+        button:hover {
+          background: #b71c1c;
+        }
+        input, select {
+          padding: 10px;
+          width: 250px;
+          border-radius: 8px;
+          border: 1px solid #ccc;
+          margin: 10px;
+          font-size: 16px;
+        }
+        .offers {
+          margin-top: 20px;
+          display: none;
+          grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+          gap: 15px;
+        }
+        .offer {
+          background: white;
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          text-align: center;
+        }
+        .offer img {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 8px;
+          margin-bottom: 10px;
+        }
+        .offer h3 {
+          margin: 0 0 10px;
+          color: #333;
+        }
+        .offer p {
+          color: #d32f2f;
+          font-weight: bold;
+        }
+        /* زر الرجوع */
+        .back-btn {
+          background: #444;
+          margin-top: 20px;
+        }
+        .back-btn:hover {
+          background: #222;
+        }
+      </style>
+    </head>
+    <body>
+    
+      <h1>🍔 مطعم كودو</h1>
+    
+      <div>
+        <button onclick="showOffers()">عرض العروض</button>
+        <button onclick="hideOffers()">إخفاء العروض</button>
+      </div>
+    
+      <!-- مربع البحث -->
+      <input type="text" id="search" placeholder="ابحث عن عرض (مثلاً: بيتزا, برجر)" onkeyup="filterOffers()">
+    
+      <!-- فلترة حسب السعر -->
+      <select id="priceFilter" onchange="filterOffers()">
+        <option value="all">كل الأسعار</option>
+        <option value="low">أقل من 100</option>
+        <option value="mid">من 100 إلى 200</option>
+        <option value="high">أكثر من 200</option>
+      </select>
+    
+      <div id="offers" class="offers"></div>
+    
+      <!-- زر الرجوع -->
+      <button class="back-btn" onclick="goBack()">⬅ رجوع</button>
+    
+      <script>
+        const offersData = [
+      { title: "عرض برجر دبل", price: 99, img: "https://i.ibb.co/6gJQf1d/burger.jpg" },
+      { title: "بيتزا + بيبسي", price: 120, img: "https://i.ibb.co/q9b2H1s/pizza.jpg" },
+      { title: "وجبة كومبو عائلية", price: 199, img: "https://i.ibb.co/M1tgdm5/combo.jpg" },
+      { title: "عرض تشيكن فيليه + بطاطس + مشروب", price: 89, img: "https://i.ibb.co/1MMrjWn/chicken.jpg" },
+      { title: "عرض 2 بيتزا وسط + 2 بيبسي", price: 199, img: "https://i.ibb.co/q9b2H1s/pizza.jpg" },
+      { title: "وجبة سوبر عائلية (4 ساندوتش + 4 بيبسي)", price: 299, img: "https://i.ibb.co/6gJQf1d/burger.jpg" },
+      { title: "عرض كودو ميكس (برجر + بيتزا + بطاطس)", price: 159, img: "https://i.ibb.co/M1tgdm5/combo.jpg" },
+      { title: "كودو بوكس (برجر + تشيكن + بطاطس + مشروب)", price: 179, img: "https://i.ibb.co/1MMrjWn/chicken.jpg" },
+      { title: "عرض برجر جبنة دوبل + بطاطس", price: 109, img: "https://i.ibb.co/6gJQf1d/burger.jpg" },
+      { title: "عرض بيتزا عائلية + لتر بيبسي", price: 189, img: "https://i.ibb.co/q9b2H1s/pizza.jpg" },
+      { title: "عرض رمضان (وجبة كاملة + شوربة + مشروب)", price: 149, img: "https://i.ibb.co/M1tgdm5/combo.jpg" },
+    ];
+    
+        function showOffers() {
+          displayOffers(offersData);
+        }
+    
+        function hideOffers() {
+          document.getElementById("offers").style.display = "none";
+        }
+    
+        function displayOffers(data) {
+          const offersContainer = document.getElementById("offers");
+          offersContainer.innerHTML = "";
+          offersContainer.style.display = "grid";
+    
+          if (data.length === 0) {
+            offersContainer.innerHTML = "<p>❌ لا توجد عروض مطابقة</p>";
+            return;
+          }
+    
+          data.forEach(offer => {
+            const div = document.createElement("div");
+            div.className = "offer";
+            div.innerHTML = `
+              <img src="${offer.img}" alt="${offer.title}">
+              <h3>${offer.title}</h3>
+              <p>${offer.price} جنيه</p>
+            `;
+            offersContainer.appendChild(div);
+          });
+        }
+    
+        function filterOffers() {
+          const query = document.getElementById("search").value.toLowerCase();
+          const priceFilter = document.getElementById("priceFilter").value;
+    
+          let filtered = offersData.filter(offer =>
+            offer.title.toLowerCase().includes(query)
+          );
+    
+          if (priceFilter === "low") {
+            filtered = filtered.filter(offer => offer.price < 100);
+          } else if (priceFilter === "mid") {
+            filtered = filtered.filter(offer => offer.price >= 100 && offer.price <= 200);
+          } else if (priceFilter === "high") {
+            filtered = filtered.filter(offer => offer.price > 200);
+          }
+    
+          displayOffers(filtered);
+        }
+    
+        function goBack() {
+          window.history.back();
+        }
+      </script>
+    
+    </body>
+    </html>
+    

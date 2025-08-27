@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contant us</title>
+  <style>
+    body {
+      font-family: "Tahoma", sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: skyblue;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #555;
+      font-weight: 600;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-bottom: 15px;
+      transition: border-color 0.2s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #2563eb;
+      outline: none;
+    }
+
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      background: #555;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: slategray;
+    }
+
+    .btd{
+        display: block;
+        width: 50%;
+        padding: 9px;
+        border: none;
+        border-radius: 14px;
+        background: #555;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .btd:hover{
+        background: slategray;
+    }
+
+    .info {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #374151;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>تواصل معنا</h2>
+    <form action="#" method="post">
+      <label for="name">الاسم</label>
+      <input type="text" id="name" name="name" placeholder="اكتب اسمك" required>
+
+      <label for="email">البريد الإلكتروني</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+      <label for="message">رسالتك</label>
+      <textarea id="message" name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+
+      <button type="submit" class="btn">إرسال</button>
+      
+    </form>
+    
+
+    <div class="info">
+      📍 العنوان: القاهرة - مصر <br>
+      ☎️ الهاتف: 01012345678 <br>
+      📧 البريد: support@example.com
+    </div>
+    <button type="submit" class="btd">رجوع</button>
+    
+  </div>
+</body>
+</html>

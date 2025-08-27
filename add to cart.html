@@ -1,0 +1,267 @@
+!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initail-scale=1.0">
+    <title>Kudu Restaurant</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.main.css">
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          direction: rtl;
+          background: #f8f8f8;
+          text-align: center;
+          margin: 0;
+          padding: 20px;
+        }
+        h1 {
+          color: #d32f2f;
+        }
+        button {
+          background: #777;
+          color: white;
+          border: none;
+          padding: 8px 15px;
+          font-size: 16px;
+          border-radius: 8px;
+          cursor: pointer;
+          margin: 5px;
+        }
+        button:hover {
+          background: #b71c1c;
+        }
+        .offers {
+          margin-top: 20px;
+          display: none;
+          grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+          gap: 15px;
+        }
+        .offer {
+          background: white;
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          text-align: center;
+        }
+        .offer img {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 8px;
+          margin-bottom: 10px;
+        }
+        .cart {
+          margin-top: 30px;
+          background: #fff3cd;
+          padding: 15px;
+          border-radius: 10px;
+          border: 1px solid #ffeeba;
+          display: none;
+          text-align: right;
+        }
+        .cart h2 {
+          margin-top: 0;
+          color: #856404;
+        }
+        .cart-item {
+          border-bottom: 1px solid #ddd;
+          padding: 5px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .qty-btn {
+          background: #007bff;
+          padding: 3px 8px;
+          font-size: 14px;
+          border-radius: 5px;
+        }
+        .qty-btn:hover {
+          background: #0056b3;
+        }
+        .remove-btn {
+          background: #444;
+          padding: 3px 8px;
+          font-size: 14px;
+          border-radius: 5px;
+        }
+        .remove-btn:hover {
+          background: #000;
+        }
+        .back-btn {
+          background: #444;
+          margin-top: 20px;
+        }
+        .back-btn:hover {
+          background: #222;
+        }
+    
+        /* 🔹 إشعار */
+        .notification {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: #4caf50;
+          color: white;
+          padding: 12px 20px;
+          border-radius: 8px;
+          font-size: 16px;
+          box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+          display: none;
+          z-index: 9999;
+          animation: fadein 0.5s, fadeout 0.5s 1.5s;
+        }
+    
+        @keyframes fadein {
+          from { opacity: 0; transform: translateY(-20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+    
+        @keyframes fadeout {
+          from { opacity: 1; transform: translateY(0); }
+          to { opacity: 0; transform: translateY(-20px); }
+        }
+      </style>
+    </head>
+    <body>
+    
+      <h1>🍔 مطعم كودو</h1>
+    
+      <div>
+        <button onclick="showOffers()">عرض العروض</button>
+        <button onclick="hideOffers()">إخفاء العروض</button>
+      </div>
+    
+      <div id="offers" class="offers"></div>
+    
+      <!-- سلة المشتريات -->
+      <div id="cart" class="cart">
+        <h2>🛒 سلة المشتريات</h2>
+        <div id="cartItems"></div>
+        <p id="totalPrice"><strong>الإجمالي: 0 جنيه</strong></p>
+      </div>
+    
+      <!-- زر الرجوع -->
+      <button class="back-btn" onclick="goBack()">⬅ رجوع</button>
+    
+      <!-- 🔹 الإشعار -->
+      <div id="notification" class="notification">✅ تمت الإضافة للسلة</div>
+    
+      <script>
+        const offersData = [
+      { title: "عرض برجر دبل", price: 99, img: "https://i.ibb.co/6gJQf1d/burger.jpg" },
+      { title: "بيتزا + بيبسي", price: 120, img: "https://i.ibb.co/q9b2H1s/pizza.jpg" },
+      { title: "وجبة كومبو عائلية", price: 199, img: "https://i.ibb.co/M1tgdm5/combo.jpg" },
+      { title: "عرض تشيكن فيليه + بطاطس + مشروب", price: 89, img: "https://i.ibb.co/1MMrjWn/chicken.jpg" },
+      { title: "عرض 2 بيتزا وسط + 2 بيبسي", price: 199, img: "https://i.ibb.co/q9b2H1s/pizza.jpg" },
+      { title: "وجبة سوبر عائلية (4 ساندوتش + 4 بيبسي)", price: 299, img: "https://i.ibb.co/6gJQf1d/burger.jpg" },
+      { title: "عرض كودو ميكس (برجر + بيتزا + بطاطس)", price: 159, img: "https://i.ibb.co/M1tgdm5/combo.jpg" },
+      { title: "كودو بوكس (برجر + تشيكن + بطاطس + مشروب)", price: 179, img: "https://i.ibb.co/1MMrjWn/chicken.jpg" },
+      { title: "عرض برجر جبنة دوبل + بطاطس", price: 109, img: "https://i.ibb.co/6gJQf1d/burger.jpg" },
+      { title: "عرض بيتزا عائلية + لتر بيبسي", price: 189, img: "https://i.ibb.co/q9b2H1s/pizza.jpg" },
+      { title: "عرض رمضان (وجبة كاملة + شوربة + مشروب)", price: 149, img: "https://i.ibb.co/M1tgdm5/combo.jpg" },
+    ];
+        let cart = [];
+    
+        function showOffers() {
+          displayOffers(offersData);
+        }
+    
+        function hideOffers() {
+          document.getElementById("offers").style.display = "none";
+        }
+    
+        function displayOffers(data) {
+          const offersContainer = document.getElementById("offers");
+          offersContainer.innerHTML = "";
+          offersContainer.style.display = "grid";
+    
+          data.forEach((offer, index) => {
+            const div = document.createElement("div");
+            div.className = "offer";
+            div.innerHTML = `
+              <img src="${offer.img}" alt="${offer.title}">
+              <h3>${offer.title}</h3>
+              <p>${offer.price} جنيه</p>
+              <button onclick="addToCart(${index})">🛒 أضف إلى السلة</button>
+            `;
+            offersContainer.appendChild(div);
+          });
+        }
+    
+        function addToCart(index) {
+          const existing = cart.find(item => item.title === offersData[index].title);
+          if (existing) {
+            existing.qty += 1;
+          } else {
+            cart.push({ ...offersData[index], qty: 1 });
+          }
+          updateCart();
+          showNotification("✅ تمت الإضافة للسلة");
+        }
+    
+        function updateCart() {
+          const cartDiv = document.getElementById("cart");
+          const cartItems = document.getElementById("cartItems");
+          const totalPrice = document.getElementById("totalPrice");
+    
+          cartDiv.style.display = "block";
+          cartItems.innerHTML = "";
+    
+          let total = 0;
+          cart.forEach((item, i) => {
+            total += item.price * item.qty;
+            cartItems.innerHTML += `
+              <div class="cart-item">
+                <span>${item.title} - ${item.price} جنيه × ${item.qty}</span>
+                <div>
+                  <button class="qty-btn" onclick="increaseQty(${i})">➕</button>
+                  <button class="qty-btn" onclick="decreaseQty(${i})">➖</button>
+                  <button class="remove-btn" onclick="removeFromCart(${i})">❌</button>
+                </div>
+              </div>
+            `;
+          });
+    
+          totalPrice.innerHTML = `<strong>الإجمالي: ${total} جنيه</strong>`;
+        }
+    
+        function increaseQty(index) {
+          cart[index].qty++;
+          updateCart();
+        }
+    
+        function decreaseQty(index) {
+          if (cart[index].qty > 1) {
+            cart[index].qty--;
+          } else {
+            cart.splice(index, 1);
+          }
+          updateCart();
+        }
+    
+        function removeFromCart(index) {
+          cart.splice(index, 1);
+          updateCart();
+        }
+    
+        function goBack() {
+          window.history.back();
+        }
+    
+        // 🔹 دالة عرض الإشعار
+        function showNotification(message) {
+          const notification = document.getElementById("notification");
+          notification.textContent = message;
+          notification.style.display = "block";
+    
+          setTimeout(() => {
+            notification.style.display = "none";
+          }, 2000);
+        }
+      </script>
+    
+    </body>
+    </html>
+    
