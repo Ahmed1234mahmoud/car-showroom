@@ -1,92 +1,36 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initail-scale=1.0">
-    <title>Kudu Restaurant</title>
-    <link rel="stylesheet" href="main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.main.css">
-    <style>
-        body {font-family: 'Tahoma',sans-serif;}
-       .navbar{background: #ffc107;}
-       .menu-car{transition: 0.3c;}
-       .menu-car:hover{transform: scale(1.05);}
-       .footer{background: #222; color: #fff; padding: 20px; text-align: center;}
-    </style>
-    </head>
-   <body>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Kudu</a>
-            <button class="navbar-toggler" type="button" data-bs-toggler="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">المنيو</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-dark text-white" href="Offers.html">العروض</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-dark text-white" href="Contact us.html">تواصل معنا</a>
-                    <li class="nav-item"><a class="nav-link btn btn-dark text-white" href="login.html">تسجيل الدخول</a>
-                </ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مقتطفات</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="script.js" defer></script>
+<body>
+
+    <header>
+        <div class="book" id="book">
+            <div class="page">
+                <div class="front"><h2>Page 1</h2><p>Welcome to this animated book.</p></div>
+                <div class="back"></div>
             </div>
+        <div class="page">
+            <div class="front"><h2>page 2</h2><p>You can Filp pages one by one.</p></div>
+            <div class="back"></div>
         </div>
-    </nav>
-    <!--Hero-->
-    <div class="container">
-        <img src="download (2).jpeg" alt="">
-        <h1>مرحبا بك في مطعم كودو </h1>
-        <p>أفضل برجر وسندوتشات طازجة يوميا</p>
-    </div>
-    <!--Menu Section-->
-     <div class="container my-5">
-        <h2 class="mb-4">المنيو</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="Card menu-card">
-                    <img src="download.jpeg" class="Card-img-top" alt="برجر">
-                    <div class="card-body">
-                        <a href="add to cart.html" class="btn btn-warning">أضف للسلة</a>
-            
-                    </div>
-                    <div class="container my-5">
-                        <h2 class="mb-4">المنيو</h2>
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <div class="Card menu-card">
-                                    <img src="images (1).jpeg" class="Card-img-top" alt="بطاطس">
-                                    <div class="card-body">
-                                        <a href="add to cart.html" class="btn btn-warning">أضف للسلة</a>  
-                </div>
-                <div class="container my-5">
-                    <h2 class="mb-4">المنيو</h2>
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <div class="Card menu-card">
-                                <img src="images.jpeg" class="Card-img-top" alt="شاورما">
-                                <div class="card-body">
-                                    <a href="add to cart.html" class="btn btn-warning">أضف للسلة</a>
-                        
+
+        <div class="page">
+            <div class="front"><h2>page 3</h2><p>Notice the text dosent rotate anymore.</p></div>
+            <div class="back"></div>
+        </div>
+        <div class="page">
+            <div class="front"><h2>page 4</h2><p>The end of this little book.</p></div>
+            <div class="back"></div>
+        </div>
             </div>
-            <div class="container my-5">
-                <h2 class="mb-4">المنيو</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="Card menu-card">
-                            <img src="images 21.jpeg" class="Card-img-top" alt="بطاطس">
-                            <div class="card-body">
-                                <a href="add to cart.html" class="btn btn-warning">أضف للسلة</a>  
-        </div>
-        </div>
-     </div>
-    
-   
-     <!--footer-->
-    <div class="footer">
-      <p>  2025 Kudu Restaurant | جميع الحقوق محفوظة </p>
-      
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-   </body>
+        <button onclick="flipPage()">FlipPage</button>
+        
+        
+    </header>
+</body>
 </html>
