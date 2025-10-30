@@ -1,36 +1,242 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مقتطفات</title>
-  <link rel="stylesheet" href="main.css">
-  <script src="script.js" defer></script>
-<body>
-
-    <header>
-        <div class="book" id="book">
-            <div class="page">
-                <div class="front"><h2>Page 1</h2><p>Welcome to this animated book.</p></div>
-                <div class="back"></div>
-            </div>
-        <div class="page">
-            <div class="front"><h2>page 2</h2><p>You can Filp pages one by one.</p></div>
-            <div class="back"></div>
-        </div>
-
-        <div class="page">
-            <div class="front"><h2>page 3</h2><p>Notice the text dosent rotate anymore.</p></div>
-            <div class="back"></div>
-        </div>
-        <div class="page">
-            <div class="front"><h2>page 4</h2><p>The end of this little book.</p></div>
-            <div class="back"></div>
-        </div>
-            </div>
-        <button onclick="flipPage()">FlipPage</button>
-        
-        
-    </header>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initail-scale=1.0">
+        <title>KUDU</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Favicon -->
+         <link rel="shortcut icon" href="./images/favicon.jfif" type="image/x-icon">
+         <!-- Foontawesome -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
 </html>
+<body>
+    <!-- Header Start -->
+     <header id="header">
+        <nav class="navbar">
+           <a href="#home" ><img src="./images/lo.jfif" class="Logo"></a>
+           <ul>
+            <li> <a href="#home">Home</a> </li>
+            <li>  <a href="#about">About</a> </li>
+            <li> <a href="#menu">Menu</a> </li>
+            <li> <a href="#testimoials">Testimoials</a> </li>
+            <li> <a href="#contactus">Contactus</a> </li>
+           </ul>
+        </nav>
+     </header>
+     <!-- Header End -->
+      <!-- Main Start -->
+       <main>
+        <!-- Home Start -->
+         <section id="home">
+            <div class="container">
+                <div class="home-content">
+                    <div class="content-text">
+                        <h3>🍔 Kudu – Taste that lasts!</h3>
+                        <h1>Kudu Flavor</h1>
+                        <p>Kudu is one of the most popular fast-food restaurants known for its delicious sandwiches, burgers, and freshly prepared meals made right in front of customers. It stands out for its high-quality ingredients, quick service, and wide variety of menu options, making it a favorite destination for those who love great taste and a fresh dining experience.</p>
+
+                        <a href="#" class="btn">Learn more <i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <!-- <img src="" alt="KUDU"> -->
+                </div>
+            </div>
+            
+         </section>
+        <!-- Home End -->
+         <!-- About Start -->
+         <section id="about">
+            <div class="container">
+                <div class="row">
+                    <img src="./images/images (4).jfif" alt="Kudu">
+                    <div class="about-content">
+                        <h2><span class="text-primary">Kudu Restaurant</span>Riyadh, Saudi Arabia.</h2>
+                        <p>It is well known for its freshly made sandwiches, burgers, and breakfast meals, prepared in an open kitchen style. Kudu has grown</p>
+                        <div class="item">
+                            <h3>Extra Information about Kudu Restaurant</h3>
+                            <p>
+                                Kudu is considered one of the first Saudi brands to introduce the concept of freshly prepared fast food in the Kingdom. It offers a wide variety of meals including chicken and beef sandwiches, salads, fries, and desserts. The brand slogan focuses on “Freshly Made for You”, emphasizing freshness and quality.</p>
+                                <div class="item">
+                                    <h3>Quality &AMP; Sustainability</h3>
+                                    <p> also provides mobile app services for delivery and online orders, allowing customers to order from anywhere easily. The restaurant has continued to expand regionally and aims to bring its Saudi-made food concept to other countries.</p>  
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+          <!-- About End -->
+           <!-- Menu Start -->
+            <section id="menu">
+                <div class="container">
+                    <div class="heading">
+                        <span class="text-primary">Set Manu</span>
+                        <h2>Our popular Menau</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <!-- item 1 -->
+                             <div class="item">
+                                <img src="./images/images (1).jfif" alt="porger">
+                                <div class="details">
+                                    <h3>Porger</h3>
+                                    <p></p>
+                                </div>                         
+                             <div class="price">
+                                <p class="text-primary">$12.44</p>
+                             </div>
+                            </div>
+                        <!-- Item 2 -->
+                        <div class="item">
+                            <img src="./images/images (2).jfif" alt="Shawrme">
+                            <div class="details">
+                                <h3>Shawrme</h3>
+                                <p></p>
+                            </div>
+                                <div class="price">
+                                    <p class="text-primary">$13.88</p>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                             <div class="item">
+                                <img src="./images/images (3).jfif" alt="Taspeh">
+                                <div class="details">
+                                    <h3>Taspeh</h3>
+                                    <p></p>
+                                </div>
+                                <div class="price">
+                                    <p class="text-primary">$11.22</p>
+                                </div>
+                             </div>
+                             <!-- Item 4 -->
+                               <div class="item">
+                                <img src="./images/images (5).jfif" alt="Crispy">
+                                <div class="details">
+                                    <h3>Crispy</h3>
+                                    <p></p>
+                                </div>
+                                <div class="price">
+                                    <p class="text-primary">$16.11</p>
+                                </div>
+                               </div>
+                                   
+                        </div>
+                    </div>     
+                                
+            </section>
+            <!-- Manu End -->
+             <!-- Testimoials Start -->
+              <section id="testimoials">
+                <div class="container">
+                    <div class="heading">
+                        <h2>what our clients says</h2>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            <img src="./images/CHCH9952.JPG" alt="Ahmed Mahmoud">
+                            <h2>Ahmed Mahmoud</h2>
+                            <p>“Honestly, this coffee shop has completely changed my morning routine.
+                                The coffee tastes rich and fresh every single time, and you can tell the beans are high quality.
+                                I love how consistent they are — every cup feels made with care.”</p>
+        
+                        </div>
+                        <div class="item">
+                            <img src="./images/aaaaaa.jpg" alt="Abdallah Mahmoud">
+                            <h2>Abdallah Mahmoud</h2>
+                            <p>“I’m obsessed with their cappuccino! The balance between the espresso and milk is just perfect.
+                                The foam is always silky and light, not heavy or bitter like other places.
+                                It’s my go-to order whenever I need something comforting.”</p>
+                        </div>
+                        <div class="item">
+                            <img src="./images/IMG_E0054.JPG" alt="Moahmmed Mahmoud">
+                            <h2>Moahmmed Mahmoud</h2>
+                            <p>“Every time I walk into the café, the aroma of freshly brewed coffee hits me instantly.
+                                It’s such a cozy and relaxing atmosphere that makes you want to stay longer.
+                                Their espresso is strong, flavorful, and always served at the perfect temperature.”</p>
+                        </div>
+                    
+                    </div>
+                </div>
+              </section>
+            
+              <!-- Testimoials End -->
+               <!-- Contactus Start -->
+                <section id="contactus">
+                    <div class="container">
+                        <div class="heading">
+                            <span class="text-primary">what Happens Here</span>
+                            <h2>Check-in Area</h2>
+                        </div>
+                        <div class="row">
+                            <div class="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14191134.160714163!2d41.90399453990517!3d29.730406754171685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zS3VkdSDYqNin2YTZgtix2Kgg2YXZhiDYp9mE2LPYudmI2K_Zitip!5e0!3m2!1sar!2seg!4v1761401341513!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="contact-content">
+                                <h3>Book a Table</h3>
+                            <form>
+                                <input type="text" name="name" id="name" placeholder="Your Name"> 
+                                    <input type="email" name="email" id="email" placeholder="Your email"> 
+                                    <input type="number" name="persons" id="persons" placeholder="persons"> 
+                                    <input type="date" name="date" id="date" >                                  
+                                    <input type="time" name="time" id="time" > 
+                                    <textarea name="massage" id="massage" placeholder="Your Massage" rows="5"></textarea>
+                                    <button type="submit" class="btn-submit">Book a Table</button>
+
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                
+
+               
+                <!-- Contactus End -->
+       </main>
+       
+       <!-- Main End -->
+        <!-- Footer Start -->
+         <footer id="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                           <h3>Profile</h3> 
+                           <p>🍔 "Kudu is a popular fast-food restaurant in Saudi Arabia, known for its fresh sandwiches, burgers, and delicious breakfast meals."</p>
+                           <ul>
+                            <li><i class="fa-solid fa-location-dot"></i>Address: Giza Egypt</li>
+                                    <li><i class="fa-solid fa-envelope"></i>Email: contact@alsoliman007768@gmail.com</li>
+                                    <li><i class="fa-solid fa-phone"></i>phone: 01229528782</li>
+                           </ul>
+                        </div>
+                        <div class="col">
+                            <h3>Effective links</h3>
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About US</a></li>
+                                <li><a href="#menu">Menu</a></li>
+                                <li><a href="#testimoials">Testimoials</a></li>
+                                <li><a href="contactus"></a>Contactus</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <h3>Follow US ON</h3>
+                            <ul>
+                        
+                                <li><a href="#"><i class="fa-brands fa-facebook"></i>Facbook</a></li>
+                                <li><a href="##www.linkedin.com/in/ahmed-mahmoud-8bb2a3325"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
+                                <li><a href="#"><i class="fa-brands fa-whatsapp"></i>Whatsapp</a></li>
+                                <li><a href="#"><i class="fa-brands fa-twitter"></i>witter</a></li>
+                                <li><a href="#"><i class="fa-brands fa-wordpress"></i>Wordpress</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&cap;© 2025 Kudu | Fresh Taste, Fast Service, Happy You 😋 <strong><a href="https://github.com/Ahmed1234mahmoud/car-showroom" target="_blank">Ahmed Mahmoud</a></strong></p>
+                
+            </div>
+         </footer>
+         <!-- Footer End -->
+</body>

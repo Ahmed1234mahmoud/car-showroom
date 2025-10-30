@@ -1,395 +1,363 @@
-body{
-    font-family: 'cairo',sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+*{
     margin: 0;
     padding: 0;
-    direction: rtl;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
 }
 
-h1, h2 , h3 {
-   color: #0a3db2;
-}
-/*************************/
-.logo{
-    margin-bottom: 30%;
-    cursor: pointer;
+:root{
     
-    
-}
-/**************************/
-.logo:hover{
-    color: brown;
-    transform: scale(1.05);
+    --bg-color:#f1f1f1;
+    --bg-secondary:#fbfbfb;
+    --dark-gray:#333;
+    --line-brown:#c7a17a;
+    --black:#1f2226;
 }
 
-p, li , label{
-    color: #333;
+body{
+    font-family: "Open Sans", sans-serif;
+    /* background-color: var(--black); */
 }
-/******************/
-header{
+
+h1, h2, h3{
+    font-family:  "Oswald", sans-serif;
+    color: var(--dark-gray);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* utility classes */
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.text-primary{
+    color: var(--line-brown);
+}
+
+.heading{
     text-align: center;
-    font-size: 25px;
-    padding: 25px 0;
-    background-color: aliceblue;
-    color: #777;
-    
 }
 
-/**********************/
-
-h2 .logo{
-    margin-bottom: 10px ;
-    
+.heading span{
+    font-size: 18px;
 }
 
-/**********************/
-nav div.img{
-
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    border-radius: 10px;
-    padding: 0 90px;
-    margin: 0 100px;
-    cursor: pointer;
-   
-    
+.heading h2{
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
-/*********************/
-nav{
+/* Header Start */
+#header{
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+#header .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    max-width: 1200px;
+    margin: auto;
+    height: 90px;
 }
 
+#header .navbar .Logo{
+    width: 300px;
+}
 
-/***********************/
-
-nav ul{
-    list-style: none;
+#header .navbar ul{
     display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
 }
 
-nav ul li a{
-    color: #333;
+#header .navbar ul li a{
+    color: var(--dark-gray);
     font-size: 18px;
-    text-decoration: none;
-    font-weight: bold;
+    margin: 0 20px;
+    transition: all 0.5s ease;
 }
 
-nav ul li a:hover{
-    color: brown;
-    transform: scale(1.07);
+#header .navbar ul li a:hover{
+    color: var(--line-brown);
 }
 
-/***********************/
-.welcom{
-    background-color: #dff9fb;
-    padding: 40px 20px;
-    text-align: center;
+/* Header End */
+/* Home Start */
+#home{
+    background: url("./images/logo.png") center no-repeat;
+    background-size: 100%;
+    background-color: var(--bg-color);
 }
 
-.welcom h1{
-    font-size: 30px;
-    color: #333;
-    cursor: pointer;
-    transition: 0.4s;
-}
-/***********************/
-.welcom h1:hover{
-    transform: scale(1.03);
-    color: goldenrod;
+#home .home-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh; gap:3rem;
+    align-items: center;
 }
 
-/**********************/
-
-.welcom img{
-
-    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2); 
-    padding: 0 50px;
-    width:  55%;
-
-}
-/**********************/
-
-.img.img{
-    padding: 25px;
-    margin: 100px;
-    width: 25%;
-    display:flex;
-    border-radius: 30px;
-    /*justify-content: center;*/
-    gap: 170px;
-    list-style: none;
-    cursor: pointer;
-    
+#home .home-content .content-text h3{
+    font-size: 24px;
+    font-weight: 400;
 }
 
-.img.img:hover{
-    transform: scale(1.05);
-  /*  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
-    border-color: #2196f3;
+#home .home-content .content-text h1{
+    font-size: 80px;
+    margin: 20px 0;
+    line-height: 1.3;
 }
 
-/***********************/
-.welcom p{
-    font-size: 20px;
-    color: #222;
-    cursor: pointer;
-    transition: 0.4s;
+#home .home-content .content-text p{
+    font-size: 18px;
+    line-height: 1.5;
 }
 
-.welcom p:hover{
-    color: goldenrod;
-}
-
-/***********************/
-.welcom .btn{
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #0a3d62;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.welcom .btn:hover{
-    color: brown;
-}
-
-/************************/
-.offers {
-    text-align: center;
-    padding: 20px 20px;
-    background-color:#dff9fb ;
-    
-
-}
-
-.offers h2{
-    font-size: 30px;
-    color: #222;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.offers h2:hover{
-    color: goldenrod;
-    transform: scale(1.03);
-}
-
-/************************/
-.offers-card h3{
-    font-size: 20px;
-    color: #222;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.offers-card h3:hover{
-    color: goldenrod;
-    transform: scale(1.03);
-}
-
-/************************/
-
-.offers-card p{
-   font-size: 18px;
-   color: #222;
-   cursor: pointer;
-   transition: 0.4s;
-}
-
-.offers-card p:hover{
-    color: goldenrod;
-    transform: scale(1.03);
-}
-
-/************************/
-
-.testimonials{
-    text-align: center;
-    background-color: silver;
-    padding: 10px 20px;
-}
-
-.testimonials h2{
-    font-size: 30px;
-    color: #222;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.testimonials h2:hover{
-    color: goldenrod;
-    transform: scale(1.03);
-}
-/*************************/
-.testimonials img{
-    padding:  20px;
-    width:  85%;
-    height: 250px;
-    border-radius: 40px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-}
-/**************************/
-.testimonials img:hover{
-    transform: scale(1.09);
-    border-color: #2196f3;
-}
-
-/*************************/
-.testimonials blockquote p{
-    font-size: 20px;
-    color: #222;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.testimonials blockquote p:hover{
-    color: goldenrod;
-    transform: scale(1.03);
-}
-
-/***********************/
-.testimonials blockquote cite{
-    font-size: 20px;
-    color: #222;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.testimonials blockquote cite:hover{
-    color: goldenrod;
-    transform: scale(1.03);
-}
-
-/***********************/
-.purchases{
-    text-align: center;
-    background: slategray;
-    padding: 10px 20px;
-}
-
-.purchases h3{
-    font-size: 30px;
-    color: #222;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.purchases h3:hover{
-    color: goldenrod;
-}
-
-/************************/
-.purchases ul{
-    font-size: 25px;
-    color: #222;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.purchases ul:hover{
-    color: goldenrod;
-}
-
-/**********************/
-
-.purchases a{
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #0a3d62;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.purchases a:hover{
-    color: brown;
-}
-
-/**********************/
-.purchases img{
-   padding: 90px;
-   margin-bottom: 100px;
-   border-radius: 20px;
-   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-   cursor: pointer;
-
-    
-}
-
-.purchases img:hover{
-    transform: scale(1.04);
-}
-
-/*********************/
-
-.order-form{
-    background-color: #0a3d62;
-    padding: 30px 20px;
-    max-width: 500px;
-    margin: 40px auto;
-    border-radius: 10px;
-}
-
-/**********************/
-.order-form .form{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.order-form .input,
-.order-form textarea{
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/**********************/
-
-.order-form button{
-    background-color: #0a3d62;
-    color: white;
-    padding: 10px;
-    border: none;
-}
-
-/***********************/
-
-footer{
-    background-color: #222;
-    padding: 10px 15px;
-    text-align: center;
-    
-}
-
-footer p{
-    font-size: 20px;
-    color: #f9f9f9;
-    padding: 10px 20px;
-}
-
-footer ul{
-    list-style: none;
-    padding: 0;
-}
-
-/**************************/
-
-footer ul li{
+#home .home-content .content-text .btn{
     display: inline-block;
-    margin: 0 15px;
+    margin-top: 2rem;
+    background-color: var(--line-brown);
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 30px;
+    transition: 0.5 ease;
 }
+
+#home .home-content .content-text .btn:hover{
+    background-color: var(--dark-gray);
+}
+
+#home .home-content img{
+    display: block;
+    width: 100%;
+}
+/* Home End */
+/* About Start */
+#about, #menu, #testimoials, #Contactus, #footer .footer-top{
+    padding: 6rem 0;
+}
+
+#about{
+    background-color: var(--bg-secondary);
+}
+
+#about .row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    
+}
+
+#about .row .about-content h2{
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#about .row .about-content  .item{
+    margin: 2rem 0;
+}
+
+#about .row .about-content  .item h3{
+    margin-bottom: 5px;
+}
+
+#about .container .row img{
+    width: 100%;
+    margin-right: 10px;
+}
+
+
+/* About End */
+/* Menu Start */
+#menu{
+    background-color: var(--bg-color);
+}
+
+#menu .row{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    margin-top: 1rem;
+    gap: 5rem;
+    align-items: center;
+    
+}
+
+#menu .row .col .item{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    border: 1px solid #ddd;
+    padding: 25px 20px;
+}
+
+#menu .row .col .item img{
+    width: 80px;
+    margin-left: -50px;
+}
+
+#menu .row .col .item .details{
+    margin-left: 20px;
+}
+
+#menu .row .col .item .details h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#menu .row .col .item .details p{
+    font-size: 20px;
+    font-weight: 600;
+}
+/* Menu End */
+/* Testimoials Start */
+#testimoials .row{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 6rem;
+  gap: 2.5rem;
+}
+
+#testimoials .row .item{
+ background-color: var(--bg-color);
+ text-align: center;
+ padding: 25px 25px 35px;
+}
+
+#testimoials .row .item img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-top: -50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#testimoials .row .item h2{
+    margin: 20px 10px;
+}
+
+#testimoials .row .item p{
+    line-height: 1.6;
+}
+/* Testimoials End*/
+/* Contactus Start */
+#contactus{
+    background-color: var(--bg-color);
+}
+
+#contactus .row{
+    display: grid;
+    grid-template-columns: 2fr 1.4fr;
+    margin-top: 2rem;
+}
+
+#contactus .row .contact-content{
+    background-color: #fff;
+    padding: 2.5rem;
+}
+
+#contactus .row .contact-content h3{
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+#contactus .row .contact-content form input,
+#contactus .row .contact-content form textarea{
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid#ccc;
+}
+
+#contactus .row .contact-content form .btn-submit{
+    background-color: var(--black);
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+#contactus .row .contact-content form .btn-submit:hover{
+    background-color: var(--line-brown);
+}
+
+#contactus .map iframe{
+    width: 100%;
+    height: 100%;
+}
+/* Contactus End */
+/* Footer Start  */
+#footer .footer-top{
+    background: url(./images/eeee.jpg);
+    color: #333;
+}
+
+#footer .footer-top .row{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+}
+
+#footer .footer-top .col h3{
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#footer .footer-top .col p{
+    width: 400px;
+    line-height: 1.7;
+}
+
+#footer .footer-top .col ul li{
+    margin: 10px 0;
+}
+
+#footer .footer-top .col ul li a{
+    color: #333;
+}
+
+#footer .footer-top .col ul li i{
+    margin-right: 10px;
+}
+
+#footer .copyright{
+    background-color: var(--dark-gray);
+    padding: 30px 0;
+    text-align: center;
+    color: #fff;
+}
+
+#footer .copyright p{
+    font-weight: 500;
+}
+
+#footer .copyright p a{
+    color: #fff;
+    transition: all 0.5 ease;
+}
+
+#footer .copyright p a:hover{
+    color: var(--line-brown);
+}
+
+
+/* Footer End */
